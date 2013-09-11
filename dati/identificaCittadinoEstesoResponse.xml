@@ -1,0 +1,59 @@
+	<result>
+	<result>
+		<cognomeCittadino>TESTGC</cognomeCittadino>
+		<nomeCittadino>SEI</nomeCittadino>
+		<sessoCittadino>M</sessoCittadino>
+		<dataNascitaCittadino>19880110</dataNascitaCittadino>
+		<dataDecesso />
+		<codiceFiscaleCittadino>TSTSEI88A10D150Q</codiceFiscaleCittadino>
+		<codiceFiscalePrecedenteCittadino />
+		<dataUltimaVariazioneAnagrafici>19800101
+		</dataUltimaVariazioneAnagrafici>
+		<idProvenienza>NAR</idProvenienza>
+		<tipoRilevazione>M</tipoRilevazione>
+		<validatoMef>S</validatoMef>
+		<dataValidazioneMef>20091111</dataValidazioneMef>
+		<idComuneNascitaCittadino>019036</idComuneNascitaCittadino>
+		<comuneNascitaCittadino>CREMONA</comuneNascitaCittadino>
+		<provinciaNascitaCittadino>CR</provinciaNascitaCittadino>
+		<dataUltimaVariazioneResidenza>20051118</dataUltimaVariazioneResidenza>
+		<indirizzoResidenzaCittadino>V. RIALTO</indirizzoResidenzaCittadino>
+		<civicoResidenzaCittadino>18B</civicoResidenzaCittadino>
+		<idComuneResidenzaCittadino>019036</idComuneResidenzaCittadino>
+		<comuneResidenzaCittadino>CREMONA</comuneResidenzaCittadino>
+		<provinciaResidenzaCittadino>CR</provinciaResidenzaCittadino>
+		<capResidenzaCittadino>26100</capResidenzaCittadino>
+		<frazioneResidenzaCittadino />
+		<indirizzoDomicilioCittadino>V. RIALTO</indirizzoDomicilioCittadino>
+		<civicoDomicilioCittadino>18B</civicoDomicilioCittadino>
+		<idComuneDomicilioCittadino>019036</idComuneDomicilioCittadino>
+		<comuneDomicilioCittadino>CREMONA</comuneDomicilioCittadino>
+		<capDomicilioCittadino>26100</capDomicilioCittadino>
+		<provinciaDomicilioCittadino>CR</provinciaDomicilioCittadino>
+		<frazioneDomicilioCittadino />
+		<idCasaRiposo />
+		<descrizioneRSA />
+		<dataUltimaVariazioneAmministrativi>20080721
+		</dataUltimaVariazioneAmministrativi>
+		<descrizioneDistrettoAppartenenza>CREMONA
+		</descrizioneDistrettoAppartenenza>
+		<codiceDistrettoAppartenenza>001</codiceDistrettoAppartenenza>
+		<codiceSanitarioCittadino>999AX557</codiceSanitarioCittadino>
+		<statoAssistito>ATTIVO</statoAssistito>
+		<dataDecorrenzaIscrizione>20050202</dataDecorrenzaIscrizione>
+		<dataScadenzaIscrizione />
+		<siglaAslAppartenenza>030304</siglaAslAppartenenza>
+		<descrizioneAslAppartenenza>A.S.L. DELLA PROVINCIA DI CREMONA
+		</descrizioneAslAppartenenza>
+		<siglaAslAssistenza>030304</siglaAslAssistenza>
+		<descrizioneAslAssistenza>A.S.L. DELLA PROVINCIA DI CREMONA
+		</descrizioneAslAssistenza>
+		<codiceDistrettoAssistenza>001</codiceDistrettoAssistenza>
+		<descrizioneDistrettoAssistenza>CREMONA
+		</descrizioneDistrettoAssistenza>
+		<origineDati>AR</origineDati>
+		<siglaAslResidenza>030304</siglaAslResidenza>
+		<descrizioneAslResidenza>A.S.L. DELLA PROVINCIA DI CREMONA
+		</descrizioneAslResidenza>
+		</result>
+	</result>          

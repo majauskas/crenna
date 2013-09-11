@@ -1,0 +1,58 @@
+<salusRettificaCertificatoMalattiaResponse>
+<result>
+  <param>
+    <rispostaRettificaCertificato>
+      <certificato>
+        <codiceDiagnosi>656.5</codiceDiagnosi>
+        <dataFine>20130709</dataFine>
+        <dataInizio>20130701</dataInizio>
+        <dataRilascio>20130701</dataRilascio>
+        <noteDiagnosi>SVILUPPO FETALE INSUFFICIENTE</noteDiagnosi>
+        <protocolloDaRettificare>100002120</protocolloDaRettificare>
+        <tipoCertificato>
+          <declaringClass>it.lombardia.crs.schemas.dcsanita.salus._2010_01.rettificacertificatomalattia.TipoCertificatoType</declaringClass>
+        </tipoCertificato>
+        <tipoVisita>
+          <declaringClass>it.lombardia.crs.schemas.dcsanita.salus._2010_01.rettificacertificatomalattia.TipoVisitaType</declaringClass>
+        </tipoVisita>
+      </certificato>
+      <datiINPS>
+        <dataRicezione>20130701</dataRicezione>
+        <protocolloINPS>100002121</protocolloINPS>
+      </datiINPS>
+      <lavoratore>
+        <codiceFiscale>TSTSEI88A10D150Q</codiceFiscale>
+        <cognome>TESTGC</cognome>
+        <comuneNascita>CREMONA</comuneNascita>
+        <dataNascita>19880110</dataNascita>
+        <nome>SEI</nome>
+        <provinciaNascita>CR</provinciaNascita>
+        <residenzaAbituale>
+          <CAP>26100</CAP>
+          <comune>CREMONA</comune>
+          <indirizzo>V. RIALTO</indirizzo>
+          <provincia>CR</provincia>
+        </residenzaAbituale>
+        <residenzaReperibilita>
+          <CAP>26100</CAP>
+          <comune>CREMONA</comune>
+          <idComune></idComune>
+          <indirizzo>V. RIALTO</indirizzo>
+          <nominativo>minde</nominativo>
+          <provincia>CR</provincia>
+        </residenzaReperibilita>
+        <sesso>
+          <declaringClass>it.lombardia.crs.schemas.dcsanita.salus._2010_01.rettificacertificatomalattia.SessoType</declaringClass>
+        </sesso>
+      </lavoratore>
+      <medico>
+        <codiceASL>308</codiceASL>
+        <codiceFiscale>CNPMMG60D01F205Y</codiceFiscale>
+        <cognome>OTTOTRE</cognome>
+        <nome>MMGOTTO</nome>
+        <regione>030</regione>
+      </medico>
+    </rispostaRettificaCertificato>
+  </param>
+  </result>
+</salusRettificaCertificatoMalattiaResponse>

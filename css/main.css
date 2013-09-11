@@ -1,0 +1,143 @@
+.footer-docs p {
+	font-weight: normal;
+	font-size: .9em;
+}
+
+
+.ui-mobile-viewport .footer-docs {
+	overflow: hidden;		
+}
+.ui-mobile-viewport .footer-docs p {
+	margin: 1em 15px;
+	float: left;		
+}
+.ui-mobile-viewport .footer-docs p.jqm-version {
+	float: right;
+	font-weight: normal;
+}
+
+
+em { color: red; font-weight: bold; padding-right: .25em;}
+
+
+/* .ui-dialog-background { 	opacity: 0.5; 	display: block !important; 	-webkit-transition: opacity 0.5s ease-in; 	} 	.ui-dialog-background.pop.in { 	opacity: 1; 	-webkit-transition: opacity 0.5s ease-in; 	} 	.ui-dialog { 	min-height: 100% !important; 	background: transparent !important; 	} */
+
+.ui-field-contain {
+	border: none;
+} 
+
+
+.my-list-view.ui-li-desc {
+			overflow:show;
+			text-overflow:clip;
+			white-space:normal;
+			height:30px;
+			margin-bottom:0px;
+		}
+
+
+.ui-bar-cittadino {
+	font-size: small;
+} 
+
+
+.inlineinput div {
+    display: inline;
+}
+
+.center-wrapper {
+  text-align: center;
+}
+.center-wrapper * {
+  margin: 0 auto;
+}
+
+
+
+
+.nav-glyphish-example .ui-btn .ui-btn-inner { padding-top: 40px !important; }
+.nav-glyphish-example .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
+
+.nav-glyphish-mobile .ui-btn .ui-btn-inner { padding-top: 30px !important; }
+.nav-glyphish-mobile .ui-btn .ui-icon { width: 24px!important; height: 24px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
+
+#chat .ui-icon { background:  url(../images/glyphish-icons/09-chat-2.png) 50% 50% no-repeat; background-size: 24px 22px; }
+#email .ui-icon { background:  url(../images/glyphish-icons/18-envelope.png) 50% 50% no-repeat; background-size: 24px 16px;  }
+#login .ui-icon { background:  url(../images/glyphish-icons/30-key.png) 50% 50% no-repeat;  background-size: 12px 26px; }
+#fork .ui-icon { background:  url(../images/glyphish-icons/48-fork-and-knife.png) 50% 50% no-repeat;  background-size: 22px 27px; }
+#map .ui-icon { background:  url(../images/glyphish-icons/103-map.png) 50% 50% no-repeat;  background-size: 20px 24px; }
+#gear .ui-icon { background:  url(../images/glyphish-icons/19-gear.png) 50% 50% no-repeat;  background-size: 22px 24px; }
+#gallery .ui-icon { background:  url(../images/glyphish-icons/168-upload-photo-2.png) 50% 50% no-repeat;  background-size: 22px 24px; }
+#house .ui-icon { background:  url(../images/glyphish-icons/53-house.png) 50% 50% no-repeat;  background-size: 22px 24px; }
+
+#bt-identifica-cittadino .ui-icon { background:  url(../images/glyphish-icons/user32.png) 50% 50% no-repeat;  background-size: 22px 24px; }
+#bt-invio-certificato .ui-icon { background:  url(../images/glyphish-icons/linedpaperplus32.png) 50% 50% no-repeat;  background-size: 22px 24px; }
+#bt-ricerca-certificato .ui-icon { background:  url(../images/glyphish-icons/search32.png) 50% 50% no-repeat;  background-size: 22px 24px; }
+#bt-retifica-certificato .ui-icon { background:  url(../images/glyphish-icons/notepencil32.png) 50% 50% no-repeat;  background-size: 22px 24px; }
+#bt-cancella-certificato .ui-icon { background:  url(../images/glyphish-icons/linedpaperminus32.png) 50% 50% no-repeat;  background-size: 22px 24px; }
+
+
+.ui-icon-cittadino {
+	background-image: url(../images/icone/18/ico_utente_18.gif);
+	background-size: 18px 18px;
+}
+.ui-icon-cerca-cittadino {
+	background-image: url(../images/icone/18/ico_riscontra_18.gif);
+	background-size: 18px 18px;
+}
+
+.ui-icon-calendario {
+	background-image: url(../images/icone/18/ico_calendario_18.gif);
+	background-size: 18px 18px;
+}
+
+.ui-icon-stampa {
+	background-image: url(../images/icone/18/ico_stampaDoc_18.gif);
+	background-size: 18px 18px;
+}
+
+
+
+.ui-icon-location {
+	background-image: url(../images/glyphish-icons/193-location-arrow.png);
+	background-size: 18px 18px;
+}
+
+/* .ui-icon-email { background-image: url(../images/icone/18/ico_email_18.gif); background-size: 18px 18px;} */
+.ui-icon-modifica-doc { background-image: url(../images/icone/18/ico_modifica_18.gif); background-size: 18px 18px;}
+
+
+
+
+
+#cta h1 { 
+    font-size:1.5em;
+    background: url(../images/animated/constructionspin_e0.gif) top left no-repeat;
+    padding-left: 55px;
+    min-height:37px;
+    color: #FFF;
+}
+#cta {
+    width: 500px;
+    background: #000;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px auto;
+    box-shadow: 0 0 20px #222;
+    color: #FFF;
+}
+
+
+div.growlUI { background: url(../images/icone/24/check.png) no-repeat 10px 10px; padding-top: 1px; }
+div.growlUI h1, div.growlUI h2 { 
+	color: white; 
+	padding: 5px 5px 5px 75px; 
+	text-align: left;
+	font-weight: bold; 
+	font-size: medium; 
+	font-family:'Trebuchet MS',Arial;
+	text-shadow:none;
+	text-decoration: none;	
+	}
+div.growlUI h2 { font-size: small }
+

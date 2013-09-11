@@ -1,0 +1,48 @@
+<results>
+<result>
+      <param>      
+        <rispostaInvioCertificato>        
+          <certificato>          
+            <codiceDiagnosi>656.5</codiceDiagnosi>          
+            <dataFine>20130710</dataFine>          
+            <dataInizio>20130628</dataInizio>          
+            <dataRilascio>20130628</dataRilascio>          
+            <noteDiagnosi>SVILUPPO FETALE INSUFFICIENTE</noteDiagnosi>          
+            <tipoCertificato>            
+              <declaringClass>it.lombardia.crs.schemas.dcsanita.salus._2010_01.inviocertificatomalattia.TipoCertificatoType</declaringClass>          
+            </tipoCertificato>          
+            <tipoVisita>            
+              <declaringClass>it.lombardia.crs.schemas.dcsanita.salus._2010_01.inviocertificatomalattia.TipoVisitaType</declaringClass>          
+            </tipoVisita>        
+          </certificato>        
+          <datiINPS>          
+            <dataRicezione>20130628</dataRicezione>          
+            <protocolloINPS>100002079</protocolloINPS>        
+          </datiINPS>        
+          <lavoratore>          
+            <codiceFiscale>TSTSEI88A10D150Q</codiceFiscale>          
+            <cognome>TESTGC</cognome>          
+            <comuneNascita>CREMONA</comuneNascita>          
+            <dataNascita>19880110</dataNascita>          
+            <idComuneNascita>019036</idComuneNascita>          
+            <nome>SEI</nome>          
+            <provinciaNascita>CR</provinciaNascita>          
+            <residenzaAbituale>            
+              <CAP>26100</CAP>            
+              <comune>CREMONA</comune>            
+              <idComune>019036</idComune>            
+              <indirizzo>V. RIALTO</indirizzo>            
+              <provincia>CR</provincia>          
+            </residenzaAbituale>        
+          </lavoratore>        
+          <medico>          
+            <codiceASL>308</codiceASL>          
+            <codiceFiscale>CNPMMG60D01F205Y</codiceFiscale>          
+            <cognome>OTTOTRE</cognome>          
+            <nome>MMGOTTO</nome>          
+            <regione>030</regione>        
+          </medico>      
+        </rispostaInvioCertificato>    
+      </param>  
+</result>
+</results>      

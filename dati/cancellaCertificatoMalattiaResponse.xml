@@ -1,0 +1,21 @@
+
+<salusCancellaCertificatoMalattiaResponse>
+<result>
+	<param>
+		<rispostaCancellaCertificato>
+			<certificato>
+				<protocolloDaCancellare>100002124</protocolloDaCancellare>
+			</certificato>
+			<datiINPS>
+				<dataRicezione>20130701</dataRicezione>
+				<protocolloINPS>11737</protocolloINPS>
+			</datiINPS>
+			<lavoratore>
+				<codiceFiscale>TSTSEI88A10D150Q</codiceFiscale>
+				<cognome>TESTGC</cognome>
+				<nome>SEI</nome>
+			</lavoratore>
+		</rispostaCancellaCertificato>
+	</param>
+</result>	
+</salusCancellaCertificatoMalattiaResponse>

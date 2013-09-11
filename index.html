@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" class="no-js">
+
+<head>
+<link rel="shortcut icon" href="images/logo.png" />
+<meta charset="utf-8">
+	<title>salus</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<link rel="apple-touch-icon" href="images/logo.png">
+<!-- 	<link rel="apple-touch-startup-image" href="images/logo.png" /> -->
+	<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+	<link rel="stylesheet" href="css/plugin/jquery-ui-1.10.3.custom.min.css" />
+	<link rel="stylesheet" href="css/plugin/siss.css" />
+	<link rel="stylesheet" href="css/plugin/jquery.mobile-1.3.1.min.css" />
+	<link rel="stylesheet" href="css/plugin/jqm-icon-pack-2.0-original.css" />
+	<link rel="stylesheet" type="text/css" href="css/plugin/jquery-bubble-popup-v3.css" />
+	<link rel="stylesheet" type="text/css" href="css/plugin/add2home.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+<!-- 	<link rel="stylesheet" type="text/css" href="css/plugin/bordered.css" /> -->
+
+
+
+	<script type="text/javascript" src="js/plugin/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/plugin/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="js/plugin/jquery.mobile-1.3.1.min.js"></script>
+	<script type="text/javascript" src="js/plugin/jquery.validate.js"></script>
+	<script type="text/javascript" src="js/plugin/jquery-ui-1.10.3.custom.min.js"></script>
+	<script type="text/javascript" src="js/plugin/ui.datepicker-it.js"></script>
+	<script type="text/javascript" src="js/plugin/jquery-bubble-popup-v3.min.js"></script>
+	<script type="text/javascript" src="js/plugin/date.js"></script>
+	<script type="text/javascript" src="js/plugin/json2.js"></script>
+	<script type="text/javascript" src="js/plugin/jquery.xml2json.js"></script>
+	<script type="text/Javascript" src="js/plugin/add2home.js"></script>
+	<script type="text/javascript" src="js/plugin/jquery.base64.min.js"></script>
+	<script type="text/javascript" src="js/plugin/jquery.jqprint-0.3.js"></script>
+<!-- 	<script type="text/javascript" src="js/plugin/purl.js"></script> -->
+<!-- 	<script type="text/javascript" src="js/plugin/jquery.blockUI.js"></script> -->
+	
+
+	<script type="text/javascript" src="js/home-page.js" charset="iso-8859-1"></script>
+
+
+	<script type="text/javascript">
+	
+
+		$.mobile.defaultPageTransition = 'none';
+		$.mobile.page.prototype.options.domCache = false;
+		
+		
+		
+	</script>
+									
+
+		
+</head>
+
+<body class="ui-mobile-viewport ui-overlay-d">
+
+
+
+
+	<!--	 *********************************************************************************************************
+	 			HOME-PAGE
+		 ********************************************************************************************************* -->
+	<div data-url="home-page" id="home-page" data-role="page" class="ui-page-active">
+
+		<div data-role="header" data-position="inline" data-fullscreen="false" data-theme="f">
+			<a href="#panel-dati-personali" data-icon="person" class="ui-btn-left" data-iconpos="notext">Login</a>
+			<h1></h1>			
+			<a data-icon="grid" class="ui-btn-right" data-iconpos="notext"></a>
+		</div>
+
+		<div data-role="content"></div>
+
+
+		<div data-role="panel" id="panel-dati-personali" data-position="left" data-display="reveal" data-dismissible="true" data-theme="b">
+
+			<div id="accedi-view" style="padding-top: 30px;">
+			
+					<input type="email" id="uname" value="" data-mini="true" placeholder="E-mail" />
+					<input type="password" id="pass" data-mini="true" placeholder="Password" />
+					<a id="bt-accedi" data-role="button" data-mini="true">Accedi</a>
+					<a id="bt-registrati" data-role="button" data-mini="true">Registrati</a>		
+			
+			</div>		
+
+			<div id="registrati-view" style="display: none; padding-top: 30px;">
+			
+<!-- 			<a class="ui-btn-left" data-mini="true" data-role="button" data-theme="c" style="margin-top: -70px;">Annulla</a> -->
+			
+					<input type="text" id="nome" value="" data-mini="true" placeholder="Nome" />
+					<input type="text" id="cognome" value="" data-mini="true" placeholder="Cognome" />					
+					<select data-mini="true" id="sesso" placeholder="Sesso" data-native-menu="true"  >
+						<option value=""></option>
+						<option value="">Donna</option>
+						<option value="">Uomo</option>
+					</select>
+					<input type="text" id="datanascita" value="" data-mini="true" placeholder="Data di nascita" />	
+					<input type="email" id="email" value="" data-mini="true" placeholder="E-mail" />
+					<input type="tel" id="telefono" value="" data-mini="true" placeholder="Telefono" />
+					<input type="password" id="password1" data-mini="true" placeholder="Nuova Password" />
+					<input type="password" id="password2" data-mini="true" placeholder="Ripeti Password" />
+					<a id="bt-registrazione" data-role="button" data-mini="true">Registrazione</a>
+					<a id="bt-annulla" data-role="button" data-mini="true">Annulla</a>			
+			
+			</div>					
+
+		</div>
+
+	</div>
+	
+	
+
+	<div class="ui-loader ui-corner-all ui-body-a ui-loader-default">
+		<span class="ui-icon ui-icon-loading"></span>
+	</div>
+
+
+
+
+
+
+
+</body>
+
+</html>
