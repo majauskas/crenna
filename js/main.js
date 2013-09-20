@@ -1,25 +1,96 @@
+var siss = new initSiss();function initSiss() {
+	
 
+	
+	
+    this.showLoading = function(msg) {
+//    	$('#block-popup').remove();
+//    	var page = $.mobile.activePage;
+//    	var popup = $('<div id="block-popup" data-role="popup" data-dismissible="false" data-theme="c" data-shadow="true" data-overlay-theme="a"></div>').appendTo( page );
+//    	popup.popup();
+//    	page.page('destroy').page();		
+//    	$('#block-popup').popup("open");
+    	
+    	$.mobile.loading( 'show', {text: msg,textVisible: true});
+    	//setTimeout(function() {$.mobile.loading( 'show', {text: msg,textVisible: true});},100);	
+    };
+    
+    this.hideLoading = function() {
+//    	$('#block-popup').remove();
+    	$.mobile.loading( 'hide'); 
+    }; 
+    
+    this.areYouSure = function(text, callback) {
 
-function getURLParameter(name) {
-    return decodeURI(
-        (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]
-    );
+    	$('#conferma-popup').remove();
+    	var page = $.mobile.activePage;
+    	var 
+    	    popup = $('<div id="conferma-popup" data-dismissible="false" data-role="popup" data-theme="f" data-shadow="true" data-overlay-theme="a"></div>').appendTo( page )
+    	  , header = $('<div data-role="header" data-theme="e"><a  data-icon="question" data-iconpos="notext" class="ui-btn-left"></a> <h1>Conferma</h1> </div>').appendTo( popup )
+    	  , content = $('<div data-role="content" class="ui-corner-bottom ui-content" data-theme="b"> 	<h4 style="font-size: small; text-align: center;">'+text+'</h4> 	<div class="ui-content" style="text-align: center;"> 	<div style="margin:0 auto;"> 	<a ref="#"  class="conferma-popup-do" data-role="button" data-rel="back" data-inline="true" data-mini="true" data-theme="c" data-icon="check">Si</a> 	<a data-role="button" data-mini="true" data-inline="true" data-rel="back" data-transition="flow" data-theme="c" data-icon="delete">No</a> 	</div> 	</div> </div>').appendTo( popup );
+    	popup.popup();
+    	page.page('destroy').page();		
+    	$('#conferma-popup').popup("open");
+    	
+    	$("#conferma-popup .conferma-popup-do").unbind("click.conferma-popup").on("click.conferma-popup", function() {
+    		   $('#conferma-popup').remove();
+           page.page('destroy').page();
+           $.mobile.loading( 'hide');
+//    		window.close();
+    		setTimeout(function() {    			
+    			callback(false);
+    		}, 300);
+    		$(this).off("click.conferma-popup");
+    	});		
+    }    
+    
+    
+ 
+    
+    
+    this.alertPopup = function(headerMsg, text, callback) {
+//    function alertPopup(headerMsg, text) {
+
+    	setTimeout(function() {
+
+    		$('#alert-popup').remove();
+    		var page = $.mobile.activePage;
+    		var 
+    		    popup = $('<div id="alert-popup" data-role="popup" style="max-width: 400px; " data-dismissible="false" data-theme="c" data-shadow="true" data-overlay-theme="a" data-transition="none"></div>').appendTo( page )
+    		  , header = $('<div data-role="header" data-theme="e"><a data-rel="back" data-role="button" data-icon="alert" data-iconpos="notext" class="ui-btn-left"></a> <h1 class="alert-popup-header">'+headerMsg+'</h1> </div>').appendTo( popup )
+    		  , content = $('<div data-role="content" class="ui-content" style="text-align: center;"><p>'+text+'</p><a href="#" id="alert-popup-button" data-mini="true" data-role="button" data-inline="true" data-rel="back" data-theme="c">Chiudi</a></div>').appendTo( popup );
+    		popup.popup();
+    		page.page('destroy').page();		
+    		$('#alert-popup').popup("open");
+    		$('#alert-popup-button').focus();
+    		
+        	$("#alert-popup-button").unbind("click").on("click", function() {
+	     		setTimeout(function() {    			
+	     			callback(false);
+	     		}, 100);
+//     		$(this).off("click");
+     	});			
+
+    	}, 100);		
+    }    
+    
 }
 
 
 
-	window.onload = function() {		
-		var what_to_do = document.location.hash;
-		if (what_to_do != "")
-			window.location = "index.html";
-	};
-	
-	
-	$(document).on("click", ".btHome", function() {
-		var what_to_do = document.location.hash;
-		if (what_to_do != "")
-			window.location = "index.html";
-	});	
+
+//	window.onload = function() {		
+//		var what_to_do = document.location.hash;
+//		if (what_to_do != "")
+//			window.location = "index.php";
+//	};
+//	
+//	
+//	$(document).on("click", ".btHome", function() {
+//		var what_to_do = document.location.hash;
+//		if (what_to_do != "")
+//			window.location = "index.html";
+//	});	
 	
 	jQuery.extend(jQuery.validator.messages, {
 		required: "Questo campo è obbligatorio.",
@@ -66,12 +137,6 @@ $(function() {
 
 
 
-var application = {datiCittadino : null};
-
-
-
-
-
 
 /**
  * 
@@ -104,63 +169,6 @@ function strDateConvert(date){
 
 
 
-(function () {
-
-	var originalMethod = $.mobile.loading;
-    $.mobile.loading = function (type) {
-    	  if(type == "hide")
-    		  $("body").unblock();
-         
-    	  originalMethod.apply(this, arguments);
-      };	
-
-})();
-
-
-
-
-
-
-function showLoading(msg){
-	
-	$("body").block({ "message": null });	
-	setTimeout(function() {$.mobile.loading( 'show', {text: msg,textVisible: true});},100);	
-
-}
-
-
-function showErrorPage(error){
-	
- 	application.exception = error.exception;
- 	
-    $.mobile.changePage("#salus-error-page");
-	
-}
-
-
-
-function showNotificationUI(msg){
-	$.growlUI(msg); 	
-}
-
-
-
-
-$(document).on('pageshow', '#salus-error-page', function (event) {
-//$("#salus-error-page").live("pageshow", function (event, data) {
-
-	
-//	var prevPage = data.prevPage.attr('id');
-//	var activePage = $.mobile.activePage.attr('id');
-//	var title = $("#"+prevPage+" h1").html();
-//	$("#"+activePage+" h1").html("Errore " + title);
-	
-	var exception = application.exception;
-	$("#exception-code").html(exception.code);
-	$("#exception-message").html(exception.message);
-	$("#exception-detailedMessage").html(exception.detailedMessage);
-
-});	
 
 
 
@@ -174,16 +182,8 @@ $(document).on('pageshow', '#salus-error-page', function (event) {
 
 
 
-$(function() {
 
 
-	if(!isMobileDeviceExeptIpad()){
-
-		$('.bubblepopup').CreateBubblePopup();
-	} 
-
-	
-});
 
 
 function adderrorTooltip(text, target) {
@@ -230,56 +230,32 @@ function fakeCall(pathDati, callback) {
 }
 
 
-function alertPopup(headerMsg, text) {
-	$('#alert-popup').remove();
-	var page = $.mobile.activePage;
-	var 
-	    popup = $('<div id="alert-popup" data-role="popup" data-dismissible="false" style="width: 400px" data-theme="c" data-shadow="true" data-overlay-theme="a" data-transition="flip"></div>').appendTo( page )
-	  , header = $('<div data-role="header" data-theme="e"><a data-rel="back" data-role="button" data-icon="alert" data-iconpos="notext" class="ui-btn-left"></a> <h1 class="alert-popup-header">'+headerMsg+'</h1> </div>').appendTo( popup )
-	  , content = $('<div data-role="content" class="ui-content" style="text-align: center;"><p>'+text+'</p><a href="#" id="alert-popup-button" data-role="button" data-inline="true" data-rel="back" data-theme="c">Chiudi</a></div>').appendTo( popup );
-	popup.popup();
-	page.page('destroy').page();		
-	$('#alert-popup').popup("open");
-	$('#alert-popup-button').focus();
-}
+
 
 function errorPopup(headerMsg, text) {
-	$('#error-popup').remove();
-	var page = $.mobile.activePage;
-	var 
-	    popup = $('<div id="error-popup" data-role="popup" data-dismissible="false" style="width: 400px" data-theme="f" data-shadow="true" data-overlay-theme="f" data-transition="flip"></div>').appendTo( page )
-	  , header = $('<div data-role="header" data-theme="a"><a data-rel="back" data-role="button" data-icon="error" data-iconpos="notext" class="ui-btn-left"></a> <h1 class="alert-popup-header">'+headerMsg+'</h1> </div>').appendTo( popup )
-	  , content = $('<div data-role="content" class="ui-content" style="text-align: center;"><p>'+text+'</p><a href="#" id="error-popup-button" data-role="button" data-inline="true" data-rel="back" data-theme="f">Chiudi</a></div>').appendTo( popup );
-	popup.popup();
-	page.page('destroy').page();		
-	$('#error-popup').popup("open");
-	$('#error-popup-button').focus();
-	$("#error-popup-button").bind ("click", function (event)
-			{
-			  window.close();
-			});
-}
-
-
-function areYouSure(text, callback) {
-
-	$('#conferma-popup').remove();
-	var page = $.mobile.activePage;
-	var 
-	    popup = $('<div id="conferma-popup" data-dismissible="false" data-role="popup" data-theme="f" data-shadow="true" data-overlay-theme="a" style="width: 400px"></div>').appendTo( page )
-	  , header = $('<div data-role="header" data-theme="e"><a  data-icon="question" data-iconpos="notext" class="ui-btn-left"></a> <h1>Conferma</h1> </div>').appendTo( popup )
-	  , content = $('<div data-role="content" class="ui-corner-bottom ui-content" data-theme="b"> 	<h4 style="font-size: small; text-align: center;">'+text+'</h4> 	<div class="ui-content" style="text-align: center;"> 	<div style="margin:0 auto;"> 	<a ref="#"  class="conferma-popup-do" data-role="button" data-rel="back" data-inline="true" data-theme="c" data-icon="check">Si</a> 	<a data-role="button" data-inline="true" data-rel="back" data-transition="flow" data-theme="c" data-icon="delete">No</a> 	</div> 	</div> </div>').appendTo( popup );
-	popup.popup();
-	page.page('destroy').page();		
-	$('#conferma-popup').popup("open");
 	
-	$("#conferma-popup .conferma-popup-do").unbind("click.conferma-popup").on("click.conferma-popup", function() {
-		setTimeout(function() {
-			callback(false);
-		}, 300);
-		$(this).off("click.conferma-popup");
-	});		
+	setTimeout(function() {
+
+		$('#error-popup').remove();
+		var page = $.mobile.activePage;
+		var 
+		    popup = $('<div id="error-popup" data-role="popup" data-dismissible="false" data-theme="e" data-shadow="true" data-overlay-theme="f" data-transition="flip"></div>').appendTo( page )
+		  , header = $('<div data-role="header" data-theme="e"><a data-rel="back" data-role="button" data-icon="alert" data-iconpos="notext" class="ui-btn-left"></a> <h1 class="alert-popup-header">'+headerMsg+'</h1> </div>').appendTo( popup )
+		  , content = $('<div data-role="content" class="ui-content" style="text-align: center;"><p>'+text+'</p><a href="#" id="error-popup-button" data-role="button" data-inline="true" data-rel="back" data-mini="true">Chiudi</a></div>').appendTo( popup );
+		popup.popup();
+		page.page('destroy').page();		
+		$('#error-popup').popup("open");
+		$('#error-popup-button').focus();
+		$("#error-popup-button").bind ("click", function (event)
+		{
+		
+		});
+	
+	}, 300);
 }
+
+
+
 
 
 
@@ -291,7 +267,7 @@ function bin2String(array) {
 
 function isMobileDevice(){
     return (
-        (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent))
+        (/Android|webOS|iPhone|iPad|iPod|BlackBerry|Mobile/i.test(navigator.userAgent))
     );
 }
 
@@ -314,6 +290,8 @@ function isShowBubblePopup(){
 //	}
 	
 }
-
+function erroreGenerale(arg1, arg2, arg3){
+	errorPopup(arg2, arg3.message);  
+}
 
 

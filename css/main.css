@@ -1,3 +1,38 @@
+
+
+
+#profile {
+	border-bottom: 1px solid #242A37;
+	overflow: hidden;
+	height: 88px;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-top:-15px;
+	margin-left:-15px;
+}
+
+.profile_info {
+	position: relative;
+	left: 68px;
+	top:-45px;
+	font-size: 14px;
+	color: #C4CCDA;
+	text-shadow: 0 0px 0 black;
+}
+
+
+.profile_bt {
+	left: 230px;
+	top:-88px;
+
+}
+
+
+
+
+
+
+
+
 .footer-docs p {
 	font-weight: normal;
 	font-size: .9em;
@@ -105,7 +140,6 @@ em { color: red; font-weight: bold; padding-right: .25em;}
 
 /* .ui-icon-email { background-image: url(../images/icone/18/ico_email_18.gif); background-size: 18px 18px;} */
 .ui-icon-modifica-doc { background-image: url(../images/icone/18/ico_modifica_18.gif); background-size: 18px 18px;}
-
 
 
 

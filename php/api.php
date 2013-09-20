@@ -10,7 +10,6 @@
   mysql_connect($mysql_server, $mysql_login, $mysql_password);
   mysql_select_db($mysql_database);
   
-  //$req = "SELECT * FROM utenti";
 
   $query = mysql_query($sql_string);
   
