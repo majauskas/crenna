@@ -67,6 +67,7 @@
 
 	<script type="text/javascript" src="js/main.js" charset="iso-8859-1"></script>	
 	<script type="text/javascript" src="js/home-page.js" charset="iso-8859-1"></script> 
+	<script type="text/javascript" src="js/chat.js" charset="iso-8859-1"></script> 
 
 
 	<script type="text/javascript">
@@ -124,6 +125,23 @@
 		
 
 		<div data-role="content" class="jqm-content">
+	
+	
+	    <div id="page-wrap">
+    
+        <h2>jQuery/PHP Chat</h2>
+        
+        <p id="name-area"></p>
+        
+        <div id="chat-wrap"><div id="chat-area"></div></div>
+        
+        <form id="send-message-area">
+            <p>Your message: </p>
+            <textarea id="sendie" maxlength = '100' ></textarea>
+        </form>
+    
+    </div>
+    
 	
 			<h2>Introduction</h2>
 
