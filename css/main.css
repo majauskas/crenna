@@ -1,4 +1,16 @@
 
+/* Form Container */
+.iphone-background {
+
+
+	background: url(../images/upload-bg.png);
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.1) 100%), url(../images/upload-bg.png);
+	background: -moz-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.1) 100%), url(../images/upload-bg.png);
+	background: -o-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.1) 100%), url(../images/upload-bg.png);
+	background: -ms-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.1) 100%), url(../images/upload-bg.png);
+	background: linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.1) 100%), url(../images/upload-bg.png);
+}
+
 
 
 #profile {

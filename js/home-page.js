@@ -1,15 +1,20 @@
 
 
-var loged_user;
-window.onload = function() {		
+var loged_user = localStorage["loged_user"];
+if(loged_user){
+	loged_user = JSON.parse(loged_user);
+}
+window.onload = function() {
+	
 //	$("#main-page").remove();
-		loged_user = localStorage["loged_user"];	
+	
+//		loged_user = localStorage["loged_user"];	
 		if(loged_user){
 			
 			$.mobile.changePage("#home-page");
-//			$("#slidemenu-panel").panel("open");
+
 					
-			loged_user = JSON.parse(loged_user);
+//			loged_user = JSON.parse(loged_user);
 			$("#accedi-view, #registrati-view").hide();
 			$("#user-view").show();		
 			$(".user_nome_cognome").html(loged_user.nome + "&nbsp;"+loged_user.cognome);
@@ -29,11 +34,7 @@ window.onload = function() {
 				
 			
 		}else{
-			
-//			 $.mobile.changePage("#login-page", {transition: 'none', role: 'dialog'} );    
 			 $.mobile.changePage("#login-page");   
-
-			
 		}
 		
 
@@ -47,6 +48,9 @@ window.onload = function() {
 //	}
 //});
 
+//$(document).on('pagecreate', '[data-role="page"]', function(){  
+////	$(this).css("height", $(this).parent().height()-74+"px");
+//});
 
 
 $(document).on('pagecreate', '[panel-menu="true"]', function(){     
@@ -116,14 +120,12 @@ $(document).on('pagecreate', '[panel-menu="true"]', function(){
 
 });
 
-$(document).on('pageshow', '[panel-menu="true"]', function (event) {
+$(document).on('pageshow', '[data-role="page"]', function (event) {
 
 	if(!isMobileDevice){
-//		var cwidth = $.mobile.activePage.find("[data-role='content']").css("width");
-//		$.mobile.activePage.find("[data-role='header'] h1").css("margin-left","0px");
-//		$.mobile.activePage.find("[data-role='header'] h1").css("width",cwidth);
-		$.mobile.activePage.find("[data-role='content']").css("height", $.mobile.activePage.parent().height()-74+"px");
-
+		$.mobile.activePage.find("[data-role='content']").css("min-height", $.mobile.activePage.parent().height()-74+"px");
+	}else{
+		$.mobile.activePage.find("[data-role='content']").css("min-height", $.mobile.activePage.parent().height()+"px");
 	}
 
 });
@@ -144,6 +146,9 @@ $(document).on('pagebeforeshow', '[panel-menu="true"]', function (event) {
 	}
 	
 	$.mobile.activePage.find("[href='#"+$.mobile.activePage.attr("id")+"']").parent().addClass("ui-focus");
+	
+	
+	
 });
 
 
@@ -332,11 +337,12 @@ function login(username, userpassword){
 
 
 $(function() {
-
+//	
+	
+	$(".editor").jqte();
+	$(".editor-no-bar").jqte();
 	
 
-
-	
 	$('#datanascita').datepicker( {
 		beforeShow: changeZindex,
         changeMonth: true,

@@ -9,9 +9,9 @@
   
   $con = mysql_connect($mysql_server, $mysql_login, $mysql_password);
   mysql_select_db($mysql_database);
-  
 
-  mysql_query($sql_string);
+  $query = mysql_query($sql_string);
+  print $query;
   mysql_close($con);
   
 ?>

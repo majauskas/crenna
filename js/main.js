@@ -24,19 +24,25 @@ var siss = new initSiss();function initSiss() {
 
     	$('#conferma-popup').remove();
     	var page = $.mobile.activePage;
-    	var 
-    	    popup = $('<div id="conferma-popup" data-dismissible="false" data-role="popup" data-theme="f" data-shadow="true" data-overlay-theme="a"></div>').appendTo( page )
-    	  , header = $('<div data-role="header" data-theme="e"><a  data-icon="question" data-iconpos="notext" class="ui-btn-left"></a> <h1>Conferma</h1> </div>').appendTo( popup )
-    	  , content = $('<div data-role="content" class="ui-corner-bottom ui-content" data-theme="b"> 	<h4 style="font-size: small; text-align: center;">'+text+'</h4> 	<div class="ui-content" style="text-align: center;"> 	<div style="margin:0 auto;"> 	<a ref="#"  class="conferma-popup-do" data-role="button" data-rel="back" data-inline="true" data-mini="true" data-theme="c" data-icon="check">Si</a> 	<a data-role="button" data-mini="true" data-inline="true" data-rel="back" data-transition="flow" data-theme="c" data-icon="delete">No</a> 	</div> 	</div> </div>').appendTo( popup );
+    	
+    	var popup = $('<div id="conferma-popup" data-dismissible="false" data-role="popup" data-theme="f" data-shadow="true" data-overlay-theme="a"></div>').appendTo( page );    	
+    	var header = $('<div id="conferma-popup-header" data-role="header" data-theme="e"><a  data-icon="question" data-iconpos="notext" class="ui-btn-left"></a> <h1>Conferma</h1> </div>').appendTo( popup );
+    	var content = $('<div data-role="content" class="ui-corner-bottom ui-content" data-theme="b"> 	<h4 style="font-size: small; text-align: center;">'+text+'</h4> 	<div class="ui-content" style="text-align: center;"> 	<div style="margin:0 auto;"> 	<a ref="#"  class="conferma-popup-do" data-role="button" data-rel="back" data-inline="true" data-mini="true" data-theme="c" data-icon="check">Si</a> 	<a data-role="button" data-mini="true" data-inline="true" data-rel="back" data-transition="flow" data-theme="c" data-icon="delete">No</a> 	</div> 	</div> </div>').appendTo( popup );
     	popup.popup();
+    	
+
+    	
     	page.page('destroy').page();		
     	$('#conferma-popup').popup("open");
     	
+//    	$("#conferma-popup").trigger("create");
+    	page.trigger("refresh");
+    	
     	$("#conferma-popup .conferma-popup-do").unbind("click.conferma-popup").on("click.conferma-popup", function() {
-    		   $('#conferma-popup').remove();
-           page.page('destroy').page();
+    	$('#conferma-popup').remove();
+    	
+//           page.page('destroy').page();
            $.mobile.loading( 'hide');
-//    		window.close();
     		setTimeout(function() {    			
     			callback(false);
     		}, 300);

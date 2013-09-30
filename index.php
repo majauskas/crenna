@@ -4,9 +4,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" class="no-js">
 
 <head>
-<link rel="shortcut icon" href="images/logo.png" />
+<!-- <link rel="shortcut icon" href="images/logo.png" /> -->
 
-	<title>salus</title>
+	<title>Crenna</title>
 <!-- 	<meta charset="iso-8859-1"> -->
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 
@@ -30,19 +30,21 @@
  
        
 	<link rel="stylesheet" href="css/plugin/jquery-ui-1.10.3.custom.min.css" />
+	
 	<link rel="stylesheet" href="css/plugin/siss.css" />
 	<link rel="stylesheet" href="css/plugin/jquery.mobile-1.3.1.min.css" />
 	<link rel="stylesheet" href="css/plugin/jqm-icon-pack-2.0-original.css" />
 	<link rel="stylesheet" type="text/css" href="css/plugin/jquery-bubble-popup-v3.css" />
-	<link rel="stylesheet" type="text/css" href="css/plugin/add2home.css" />
+<!-- 	<link rel="stylesheet" type="text/css" href="css/plugin/add2home.css" /> -->
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
 	<link rel="stylesheet" type="text/css" href="css/jqm-demos.css" />
+	<link rel="stylesheet" type="text/css" href="css/plugin/jquery-te-1.4.0.css" />
 
-<!-- 	<link rel="stylesheet" type="text/css" href="css/plugin/bordered.css" /> -->
-<!-- <link rel="stylesheet" type="text/css" href="css/plugin/jquery.mobile.splitview.css" /> -->
-<!-- <link rel="stylesheet" type="text/css" href="css/plugin/jquery.mobile.grids.collapsible.css" /> -->
 
-	<script type="text/javascript" src="js/plugin/jquery-1.10.2.min.js" charset="iso-8859-1"></script>
+	
+	
+	
+	<script type="text/javascript" src="js/plugin/jquery-1.10.2.min.js" charset="iso-8859-1"></script>	
 	<script type="text/javascript" src="js/plugin/jquery-migrate-1.2.1.min.js"></script>
 	<script type="text/javascript" src="js/plugin/jquery.mobile-1.3.1.min.js" charset="iso-8859-1"></script>
 	<script type="text/javascript" src="js/plugin/jquery.validate.js"></script>
@@ -61,13 +63,15 @@
 
 
 <script type="text/javascript" src="js/plugin/jquery.uploadfile.js"></script>
-
+<script type="text/javascript" src="js/plugin/jquery-te-1.4.0.min.js"></script>
 
 
 
 	<script type="text/javascript" src="js/main.js" charset="iso-8859-1"></script>	
 	<script type="text/javascript" src="js/home-page.js" charset="iso-8859-1"></script> 
-	<script type="text/javascript" src="js/chat.js" charset="iso-8859-1"></script> 
+	<script type="text/javascript" src="js/forum-page.js" charset="iso-8859-1"></script> 
+	
+<!-- 	<script type="text/javascript" src="js/chat.js" charset="iso-8859-1"></script>  -->
 
 
 	<script type="text/javascript">
@@ -94,15 +98,18 @@
 		}
 		
 //   		MBP.hideUrlBarOnLoad();
+
+		
 		
 	</script>
 	
+
 </head>
 
 <body class="ui-mobile-viewport ui-overlay-d">
 
-<div data-url="main-page" id="main-page" data-role="page" class="ui-page-active">
-</div>
+<!-- <div data-url="main-page" id="main-page" data-role="page" class="ui-page-active"> -->
+<!-- </div> -->
 
 
 
@@ -112,7 +119,7 @@
 
 
 	<!--	 *********************************************************************************************************
-	 			HOME-PAGE style="min-height: 100%;"  ui-page-active 
+	 			HOME-PAGE 
 		 ********************************************************************************************************* -->
 		 
 	<div data-url="home-page" id="home-page" data-role="page" data-theme="c" panel-menu="true" class="ui-responsive-panel">
@@ -124,35 +131,18 @@
 		</div>
 		
 
-		<div data-role="content" class="jqm-content">
+		<div data-role="content" class="jqm-content iphone-background"> <!-- iphone-background -->
+
+
+ 				<ul data-role="listview" data-inset="true" > 
+
+					<li style="padding-top: 0px"><img src="images/avatar.png"><textarea  class="editor"  ></textarea></li>
+
+				</ul>
+
+				
+
 	
-	
-	    <div id="page-wrap">
-    
-        <h2>jQuery/PHP Chat</h2>
-        
-        <p id="name-area"></p>
-        
-        <div id="chat-wrap"><div id="chat-area"></div></div>
-        
-        <form id="send-message-area">
-            <p>Your message: </p>
-            <textarea id="sendie" maxlength = '100' ></textarea>
-        </form>
-    
-    </div>
-    
-	
-			<h2>Introduction</h2>
-
-			<p class="jqm-intro">jQuery Mobile is a touch-friendly UI framework built on jQuery Core that works across all popular mobile, tablet and desktop platforms.</p>
-
-			<h2>Introduction</h2>
-
-			<p>jQuery Mobile is a user interface framework based on jQuery that works across all popular phones, tablet, e-reader, and desktop platforms. Built with accessibility and universal access in mind, we follow progressive enhancement and <a href="rwd.html">responsive web design (RWD)</a> principles. HTML5 Markup-driven configuration makes it easy to learn, but a powerful <a href="http://api.jquerymobile.com/">API</a> makes it easy to deeply customize the library.</p>
-
-			<h2>Pages & Dialogs</h2>
-
 		</div> 
 		
 
@@ -217,6 +207,119 @@
 
 	</div> 
 
+
+	
+	
+	<!--	 *********************************************************************************************************
+	 			FORUM-PAGE 
+		 ********************************************************************************************************* -->
+		 
+	<div data-url="forum-page" id="forum-page" data-role="page" data-theme="c" panel-menu="true" class="ui-responsive-panel">
+		
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="b">
+			<a id="bt-menu-toggle" data-icon="arrow-l" class="ui-btn-left" data-iconpos="notext"></a>			
+			<h1>Forum</h1>
+			<a href="#forum-page-new-discussion" data-icon="add" class="ui-btn-right" data-iconpos="notext"></a>
+
+		</div>
+		
+
+		<div id="forum-page-content" data-role="content" class="jqm-content iphone-background"><!--  iphone-background -->
+		
+		</div> 
+		
+<!-- 
+		<div data-role="popup" id="popup-new-discussion" style="min-width: 300px" data-theme="a" >
+				<div style="padding:10px 20px; text-align: center;">						 
+		          <input type="text" id="tx-titolo" value="" placeholder="titolo" data-theme="a" />
+		          <textarea cols="40" rows="8" id="textarea-testo" placeholder="testo" data-theme="a" ></textarea>
+				  <a id="bt-crea-new-discussion" data-role="button" data-inline="true" data-mini="true" data-theme="b" data-icon="add">Aggiungi</a>
+				</div>						
+		</div>-->
+		
+				<div data-role="popup" id="popup-action">
+						<ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="e">							
+							<li><a id="bt-modifica">Modifica</a></li>
+							<li><a id="bt-elimina">Elimina</a></li>
+						</ul>
+				</div>		
+		
+		
+
+	</div>	
+	
+	
+	<!--	 *********************************************************************************************************
+	 			FORUM-PAGE-NEW-DISCUSSION 
+		 ********************************************************************************************************* -->
+		 
+	<div data-url="forum-page-new-discussion" id="forum-page-new-discussion" data-role="page" data-theme="c" class="ui-responsive-panel">
+		
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="b">
+			<a data-rel="back" data-icon="arrow-l" class="ui-btn-left" data-iconpos="notext"></a>			
+			<h1></h1>
+		</div>
+		
+
+		<div data-role="content" class="jqm-content">
+
+<!-- 		style="max-width: 650px; text-align: center; align:center; margin:0 auto; " -->
+  			<div>	
+					<input type="text" id="tx-titolo" value="" placeholder="titolo"/>
+<!-- 					<textarea style="max-width: 480px;" cols="40" rows="8" id="textarea-testo" placeholder="testo" ></textarea>	 -->
+					
+					<textarea class="editor" id="textarea-testo" placeholder="testo" ></textarea>
+								
+					<a id="bt-crea-new-discussion" data-role="button" data-inline="true" data-mini="true" data-theme="b" data-icon="add">Salva</a>
+			</div>			
+
+		</div> 
+		
+
+
+	</div>		
+
+	
+	
+	
+	
+	
+	
+	<!--	 *********************************************************************************************************
+	 			FORUM-PAGE-1 
+		 ********************************************************************************************************* -->
+		 
+	<div data-url="forum-page-1" id="forum-page-1" data-role="page" data-theme="c" class="ui-responsive-panel">
+		
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="b">
+			<a data-rel="back" data-icon="arrow-l" class="ui-btn-left" data-iconpos="notext"></a>			
+			<h1></h1>
+<!-- 			<a href="#popup-new-discussion" data-icon="add" class="ui-btn-right" data-iconpos="notext" data-rel="popup" data-position-to="#forum-page-content"></a> -->
+
+		</div>
+		
+
+		<div data-role="content" class="jqm-content" ><!--  iphone-background -->
+
+
+				<ul data-role="listview" data-theme="d">
+
+					<li style="padding-top: 0px"><img src="images/avatar.png"><textarea class="editor-no-bar" id="p-content"></textarea></li>
+					<li style="padding-top: 0px"><img src="images/avatar.png"><textarea class="editor-no-bar" id="p-content"></textarea></li>
+
+				</ul>		
+		
+		
+		
+			
+
+		</div> 
+		
+
+
+	</div>		
+	
+	
 	
 	
 	
@@ -355,7 +458,7 @@
 				<li><a href="#"><img src="images/32x32/image.png" class="ui-li-icon">Foto</a></li>
 				<li><a href="#"><img src="images/32x32/film.png" class="ui-li-icon">Video</a></li>
 				<li><a href="#"><img src="images/32x32/email.png" class="ui-li-icon">Messaggi<span class="ui-li-count">12</span></a></li>	
-				<li><a href="#"><img src="images/32x32/comments.png" class="ui-li-icon">Forum</a></li>					
+				<li><a href="#forum-page"><img src="images/32x32/comments.png" class="ui-li-icon">Forum</a></li>					
 	
 			</ul>
 
